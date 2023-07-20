@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>User is <span th:text="${isActive}?'ACTIVE':'INACTIVE'" th:style="${isActive}?'color:red':'color:green'">
+	kkhdcghcg
+	</span>
+	</h1>
+	
+	<h1 th:if="${gender}=='m'">male</h1>
+	<h1 th:unless="${gender}=='m'">not male</h1>
+	
+	<div th:switch="${#lists.size(mylist)}">
+		<h2 th:case="'0'">list contain 0 elem</h2>
+		<h2 th:case="'1'">list contain 1</h2>
+		<h2 th:case="'2'">2</h2>
+		<h2 th:case="*">list contain more than 2</h2>
+	</div>
+</body>
+</html>

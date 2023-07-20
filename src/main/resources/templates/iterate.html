@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+	<h1>Going to traverse elements</h1>
+	<h1 th:text="${names}"></h1>
+	
+	<ul>
+		<li th:each="n,status : ${names}">
+			<span th:text="${status.index}+${n}"></span>
+		</li>
+		status tells no of index,sise of the list, even/odd index,first/last index etc
+		
+		<li th:each="n,status : ${names}">
+			<span th:style="${status.odd} ?'color:red':''" th:text="${status.index}+${n}" ></span>
+			</li>
+	</ul>
+	
+</body>
+</html>

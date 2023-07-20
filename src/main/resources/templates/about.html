@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		#myId{
+			color: blue;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<h1>i am learning thymeleaf</h1>
+	<h1 th:text="${name}"></h1>
+	<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+	<h1>length of the name is <span th:text="${#strings.length(name)}"></span></h1>
+	
+	value of a b n cannot be used outside div
+	<div th:with="a=5,b=7,n=${name}">
+		<h2>value of a is <span th:text="${a}"></span></h2>
+		<h2 th:text="'value of a is '+${a}"></h2>
+		<h2 th:text="'sum of '+${a}+'and'+${b}+'is'+${a+b}"></h2>
+	</div>
+	
+</body>
+</html>

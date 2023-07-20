@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+	<footer class="fragementTag" th:fragment="footer1(title,subtitle)">
+		<h1>This is fragment tag</h1>
+		<h1 th:text="${title}"></h1>
+		<h2 th:text="${subtitle}"></h2>
+		
+	</footer>
+		
+	
+</body>
+</html>
