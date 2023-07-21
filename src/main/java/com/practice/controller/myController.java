@@ -47,6 +47,13 @@ public class myController {
 	public String footerHandler(Model m) {
 		m.addAttribute("title","this is title");
 		m.addAttribute("subtitle","this is subtitle");
-		return "service";
+				return "service";
+	}
+	
+	//handling inheriting template
+	@GetMapping("/aboutNew")
+	public String inhertHandler(Model m) {
+		m.addAttribute("name","javid Iqbal");
+		return "aboutNew";
 	}
 }
